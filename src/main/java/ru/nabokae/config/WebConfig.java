@@ -1,4 +1,4 @@
-package ru.nabokae.PP_3_1_1_1.config;
+package ru.nabokae.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
@@ -20,7 +20,8 @@ import org.thymeleaf.templateresolver.ITemplateResolver;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan("ru.nabokae.PP_3_1_1_1")
+@ComponentScan("ru.nabokae.controller")
+@ComponentScan("ru.nabokae.config")
 public class WebConfig implements WebMvcConfigurer {
 
     private ApplicationContext context;

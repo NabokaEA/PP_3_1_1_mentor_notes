@@ -1,4 +1,4 @@
-package ru.nabokae.PP_3_1_1_1;
+package ru.nabokae;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

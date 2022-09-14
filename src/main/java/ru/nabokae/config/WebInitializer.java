@@ -1,9 +1,8 @@
-package ru.nabokae.PP_3_1_1_1.controller;
+package ru.nabokae.config;
 
 import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.filter.HiddenHttpMethodFilter;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
-import ru.nabokae.PP_3_1_1_1.config.WebConfig;
 
 import javax.servlet.Filter;
 

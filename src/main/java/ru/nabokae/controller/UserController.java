@@ -1,4 +1,4 @@
-package ru.nabokae.PP_3_1_1_1.controller;
+package ru.nabokae.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -6,23 +6,26 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import ru.nabokae.PP_3_1_1_1.userdata.User;
-import ru.nabokae.PP_3_1_1_1.userdata.UserService;
+import ru.nabokae.entity.User;
+import ru.nabokae.service.UserService;
 
 
 @Controller
 @RequestMapping("/users")
 public class UserController {
     public static final Logger logger = LoggerFactory.getLogger(UserController.class);
+    private UserService userService;
 
     @Autowired
-    private UserService userService;
+    public void setUserService(UserService userService) {
+        this.userService = userService;
+    }
 
 
     @GetMapping("/all")
     public String ListPage(Model model) {
         logger.info("Запрошен список пользьзовантелей");
-        model.addAttribute("usersAll", userService.listAll());
+        model.addAttribute("usersAll", userService.findAll());
         return "users";
     }
 
@@ -43,7 +46,7 @@ public class UserController {
     @GetMapping("/{id}")
     public String EditUserForm(@PathVariable("id") Long id, Model model) {
         logger.info("Запрошена страница редактирования пользователя");
-        model.addAttribute("user", userService.get(id));
+        model.addAttribute("user", userService.findById(id));
         return "user";
     }
 

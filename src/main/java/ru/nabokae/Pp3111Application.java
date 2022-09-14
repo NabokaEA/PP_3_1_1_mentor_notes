@@ -1,4 +1,4 @@
-package ru.nabokae.PP_3_1_1_1;
+package ru.nabokae;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

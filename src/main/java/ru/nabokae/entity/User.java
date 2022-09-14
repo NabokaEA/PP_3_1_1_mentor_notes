@@ -1,4 +1,4 @@
-package ru.nabokae.PP_3_1_1_1.userdata;
+package ru.nabokae.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
